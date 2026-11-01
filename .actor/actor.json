@@ -1,0 +1,11 @@
+{
+  "actorSpecification": 1,
+  "name": "bluesky-profiles-posts-followers",
+  "title": "Bluesky Profiles, Posts & Followers Scraper (Public API)",
+  "version": "0.1",
+  "buildTag": "latest",
+  "input": "./input_schema.json",
+  "output": "./output_schema.json",
+  "storages": { "dataset": { "actorSpecification": 1, "views": { "overview": { "title": "Items", "transformation": { "fields": ["type", "handle", "authorHandle", "displayName", "text", "createdAt", "likeCount", "repostCount", "followersCount", "url"] }, "display": { "component": "table", "properties": { "type": {}, "handle": {}, "authorHandle": {}, "displayName": {}, "text": {}, "createdAt": {}, "likeCount": {}, "followersCount": {}, "url": {} } } } } } },
+  "dockerfile": "../Dockerfile"
+}

@@ -1,0 +1,63 @@
+{
+  "title": "Bluesky input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "mode": {
+      "title": "Mode",
+      "type": "string",
+      "description": "posts = an account's posts; profiles = profile details; followers / following = an account's graph; searchAccounts = find accounts by keyword.",
+      "enum": [
+        "posts",
+        "profiles",
+        "followers",
+        "following",
+        "searchAccounts"
+      ],
+      "default": "posts",
+      "editor": "select"
+    },
+    "accounts": {
+      "title": "Accounts",
+      "type": "array",
+      "description": "Bluesky handles or profile URLs, e.g. bsky.app or https://bsky.app/profile/bsky.app.",
+      "editor": "stringList",
+      "prefill": [
+        "bsky.app"
+      ]
+    },
+    "searchQueries": {
+      "title": "Account search queries (mode: searchAccounts)",
+      "type": "array",
+      "description": "Keywords to search account names, handles and bios.",
+      "editor": "stringList",
+      "prefill": []
+    },
+    "maxItemsPerQuery": {
+      "title": "Max items per account / query",
+      "type": "integer",
+      "description": "Posts, followers, or search hits per account or query.",
+      "default": 100,
+      "minimum": 1,
+      "maximum": 10000
+    },
+    "sinceDate": {
+      "title": "Only posts since (mode: posts)",
+      "type": "string",
+      "description": "ISO date, e.g. 2026-01-01. Older posts are skipped and paging stops.",
+      "editor": "textfield"
+    },
+    "includeReplies": {
+      "title": "Include replies",
+      "type": "boolean",
+      "default": false,
+      "description": "Include the account's replies to other posts."
+    },
+    "includeReposts": {
+      "title": "Include reposts",
+      "type": "boolean",
+      "default": false,
+      "description": "Include reposts of other accounts' posts."
+    }
+  }
+}

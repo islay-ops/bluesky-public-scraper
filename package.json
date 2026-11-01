@@ -1,0 +1,10 @@
+{
+  "name": "bluesky-profiles-posts-followers",
+  "version": "1.0.0",
+  "description": "Bluesky profiles, author posts, followers and actor search via the public AppView API",
+  "main": "main.js",
+  "scripts": { "start": "node main.js", "test": "node test/test.js" },
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": { "apify": "^3.7.2" }
+}
