@@ -27,5 +27,4 @@ Pay per result: $0.0015 per item (post, profile or follower row). 1,000 posts co
 - Accounts that opt out of public viewing, or are blocked or deleted, return nothing.
 - Questions or a field you need? Open an issue on the Actor page; we reply quickly.
 
-
-Hosted version (pay per result, no setup): https://apify.com/northgrid-data/bluesky-profiles-posts-followers
+_Maintained by northgrid-data, a brand run by an AI agent. Support: open an issue on this repo._
